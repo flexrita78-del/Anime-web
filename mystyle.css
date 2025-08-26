@@ -1,0 +1,405 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #1a1a1a;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: #ff4c4c;
+}
+
+header .navbar a {
+  margin: 0 10px;
+  font-size: 1rem;
+  color: #fff;
+  transition: 0.3s;
+}
+
+header .navbar a:hover,
+header .navbar a.active {
+  color: #ff4c4c;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 80px 20px;
+  margin-top: 60px;
+}
+
+.heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #ff4c4c;
+}
+
+/* ===== HOME SLIDER ===== */
+.home {
+  margin-top: 70px;
+}
+
+.home .swiper-slide {
+  height: 75vh;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.home .swiper-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+
+.home .content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.home .content h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.home .content p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.home .content .btn {
+  display: inline-block;
+  background: #ff4c4c;
+  color: white;
+  padding: 8px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.home .content .btn:hover {
+  background: #cc3c3c;
+}
+
+
+/* Crunchyroll Button */
+.btn.crunchy {
+  background: #ff6600;
+}
+
+.btn.crunchy:hover {
+  background: #e65c00;
+}
+
+/* Download Button */
+.btn.download-btn {
+  background: #2ecc71;
+  margin-left: 5px;
+}
+
+.btn.download-btn:hover {
+  background: #27ae60;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact button {
+  background: #ff4c4c;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #cc3c3c;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a1a;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .home .content {
+    max-width: 90%;
+    font-size: 0.9rem;
+  }
+
+  .home .content h3 {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 60px 10px;
+  }
+}
+
+/* ===== HOME SECTION (ANIMELOOP STYLE) ===== */
+.home {
+  margin-top: 70px;
+  padding: 80px 20px;
+  background: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.home-content .anime-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.home-content .anime-season {
+  font-size: 1.5rem;
+  color: #ff4c4c;
+  margin: 10px 0;
+}
+
+.tags {
+  margin: 10px 0;
+}
+
+.tags .tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  font-weight: bold;
+  background: #222;
+  color: #fff;
+}
+
+.tags .pg { background: #ffc107; color: #000; }
+.tags .dub { background: #007bff; }
+.tags .sub { background: #28a745; }
+
+.home-content .release-date {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.home-content .description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.play-btn {
+  background: #ff4c4c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.play-btn:hover {
+  background: #cc3c3c;
+}
+
+.home-image img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-image img {
+    max-width: 100%;
+  }
+}
+
+.index {
+  padding: 40px 20px;
+  background: #0d0d0d;
+  color: white;
+}
+
+.index .heading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff4c4c;
+}
+
+.index-list {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.index-group {
+  margin-bottom: 30px;
+}
+
+.index-group h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00c8ff;
+}
+
+.index-group ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.index-group ul li {
+  margin: 5px 0;
+}
+
+.index-group ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: 0.3s;
+}
+
+.index-group ul li a:hover {
+  color: #ff4c4c;
+}
+
+/* Search Bar Styles */
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #ff4c4c;
+  font-size: 16px;
+  outline: none;
+  background: #1a1a1a;
+  color: white;
+  transition: 0.3s;
+}
+
+#searchInput:focus {
+  border-color: #00c8ff;
+  box-shadow: 0 0 5px #00c8ff;
+}
+
+/* Letter Buttons */
+.letter-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.letter-buttons button {
+  background: #1a1a1a;
+  color: white;
+  border: 2px solid #ff4c4c;
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.letter-buttons button:hover,
+.letter-buttons button.active {
+  background: #ff4c4c;
+  color: black;
+}
